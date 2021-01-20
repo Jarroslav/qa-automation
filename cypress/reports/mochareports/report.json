@@ -1,0 +1,207 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 5,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-01-20T15:51:39.855Z",
+    "end": "2021-01-20T15:51:50.690Z",
+    "duration": 6612,
+    "testsRegistered": 6,
+    "passPercent": 83.33333333333333,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cc2f2164-715b-4203-a1b8-a09bc3d5af20",
+      "title": "",
+      "fullFile": "cypress\\integration\\sample_spec.js",
+      "file": "cypress\\integration\\sample_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "01fd0745-b6ee-4f40-b740-92826fc5657e",
+          "title": "QA Automation Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "logo image",
+              "fullTitle": "QA Automation Test logo image",
+              "timedOut": null,
+              "duration": 682,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "signIn.getLogoImageError('#logomini', 'https://pecode-software.web.app/static/media/icon-logo.f8576d05.svg');",
+              "err": {},
+              "uuid": "c7d0af3a-2f7f-4548-9755-e9ad3cce56cc",
+              "parentUUID": "01fd0745-b6ee-4f40-b740-92826fc5657e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "greets with Sign In",
+              "fullTitle": "QA Automation Test greets with Sign In",
+              "timedOut": null,
+              "duration": 103,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "signIn.getGreetsSignInError('h1', 'QA Portal Login');",
+              "err": {},
+              "uuid": "35eff4ad-bc90-4dd0-a765-7758b5cf1977",
+              "parentUUID": "01fd0745-b6ee-4f40-b740-92826fc5657e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "requires username",
+              "fullTitle": "QA Automation Test requires username",
+              "timedOut": null,
+              "duration": 187,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "signIn.getUsernameError('form', 'Login');\nsignIn.getMessagesError('.help-block', 'Please enter username');",
+              "err": {},
+              "uuid": "8d36749d-c867-4e07-9ae2-c85a8155f0dc",
+              "parentUUID": "01fd0745-b6ee-4f40-b740-92826fc5657e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "requires password",
+              "fullTitle": "QA Automation Test requires password",
+              "timedOut": null,
+              "duration": 300,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "signIn.getAuthorizationError('[name=username]', 'David{Enter}');\nsignIn.getMessagesError('.help-block', 'Please enter your password');",
+              "err": {},
+              "uuid": "39986806-f619-4df8-a59d-a3add53b04ee",
+              "parentUUID": "01fd0745-b6ee-4f40-b740-92826fc5657e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "requires valid username and password",
+              "fullTitle": "QA Automation Test requires valid username and password",
+              "timedOut": null,
+              "duration": 541,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "signIn.getAuthorizationError('[name=username]', 'David');\nsignIn.getAuthorizationError('[name=password]', 'invalid{Enter}');\nsignIn.getMessagesError('.help-block', 'No account found with that username.');",
+              "err": {},
+              "uuid": "19cab9a4-9a94-4bda-a9ba-6dcc89b97e87",
+              "parentUUID": "01fd0745-b6ee-4f40-b740-92826fc5657e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "navigates to /registerlogin on successful login",
+              "fullTitle": "QA Automation Test navigates to /registerlogin on successful login",
+              "timedOut": null,
+              "duration": 4799,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "signIn.getAuthorizationError('[name=username]', 'admin');\nsignIn.getAuthorizationError('[name=password]', 'admin');\nsignIn.getHashError(link);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '' to equal 'https://www.pecodesoftware.com/qa-portal/registerlogin'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '' to equal 'https://www.pecodesoftware.com/qa-portal/registerlogin'\n    at SignInPage.getHashError (https://www.pecodesoftware.com/__cypress/tests?p=cypress\\integration\\sample_spec.js:148:24)\n    at Context.eval (https://www.pecodesoftware.com/__cypress/tests?p=cypress\\integration\\sample_spec.js:202:12)",
+                "diff": "+ 'https://www.pecodesoftware.com/qa-portal/registerlogin'\n"
+              },
+              "uuid": "e4aaaa7a-e874-4b02-b47a-1a151b6eaaf0",
+              "parentUUID": "01fd0745-b6ee-4f40-b740-92826fc5657e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c7d0af3a-2f7f-4548-9755-e9ad3cce56cc",
+            "35eff4ad-bc90-4dd0-a765-7758b5cf1977",
+            "8d36749d-c867-4e07-9ae2-c85a8155f0dc",
+            "39986806-f619-4df8-a59d-a3add53b04ee",
+            "19cab9a4-9a94-4bda-a9ba-6dcc89b97e87"
+          ],
+          "failures": [
+            "e4aaaa7a-e874-4b02-b47a-1a151b6eaaf0"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 6612,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
