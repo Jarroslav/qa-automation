@@ -37,6 +37,6 @@ describe('QA Automation Test', function () {
     it('navigates to /registerlogin on successful login', function () {
         signIn.getAuthorizationError('[name=username]', 'admin');
         signIn.getAuthorizationError('[name=password]', 'admin');
-        signIn.getHashError(link)
+        signIn.getHashError('/#');
     })
 })
